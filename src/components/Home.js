@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div >
-      <img src={logo} className="bi me-2 text-white" width="50" height="50" alt="logo" />
+      {/* <img src={logo} className="bi me-2 text-white" width="50" height="50" alt="logo" /> */}
       home
     </div>
   )

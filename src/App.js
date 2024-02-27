@@ -2,13 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 // import Contact from "./components/Contacts";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Sidebar/>
       <Routes>
         <Route path="/" element={<Home />} />
