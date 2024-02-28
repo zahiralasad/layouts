@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
     <BrowserRouter>
-      <Header />
       <Sidebar/>
       <Routes>
         <Route path="/" element={<Home />} />
