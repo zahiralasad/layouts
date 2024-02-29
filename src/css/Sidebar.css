@@ -14,10 +14,8 @@
 
 .text-overlay {
   position: absolute;
-  top: 57%;
   left: 54%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  transform: translate(-50%, -200%);
   color: #f5f5f5;
 }
 
