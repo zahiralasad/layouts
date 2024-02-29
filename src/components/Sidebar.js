@@ -43,16 +43,14 @@ function Sidebar() {
                         );
                     })
                     }
-                    <li className='nav-bar-logo'> 
-                        <div>
+                    <div className='nav-bar-logo'>
                             <img src={logo} className="App-logo nav-bar-logo" alt="logo"/>
                             <div className="text-overlay">
                                 <h3>আমরা আমরা</h3>
                             </div>
                         </div>
-                        
-                    </li>
                 </ul>
+                
             </nav>
             </IconContext.Provider>
         </>
