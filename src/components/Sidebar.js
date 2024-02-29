@@ -25,12 +25,10 @@ function Sidebar() {
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
                     <li className='navbar-toggle'>
-                        <Link  className="nav-menu-links" to='#' className='menu-bars'>
+                        <Link to='#' className='menu-bars'>
                             <AiIcons.AiOutlineClose />
                         </Link>
-                        <li className='nav-bar-logo'>
-                            <img src={logo} className="App-logo" alt="logo" /> 
-                        </li>
+                        
                     </li>
                     {SidebarData.map((item, index) => {
                         return (
@@ -45,6 +43,15 @@ function Sidebar() {
                         );
                     })
                     }
+                    <li className='nav-bar-logo'> 
+                        <div>
+                            <img src={logo} className="App-logo nav-bar-logo" alt="logo"/>
+                            <div className="text-overlay">
+                                <h3>আমরা আমরা</h3>
+                            </div>
+                        </div>
+                        
+                    </li>
                 </ul>
             </nav>
             </IconContext.Provider>
