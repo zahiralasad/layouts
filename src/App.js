@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Sidebar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         {/* <Route path="/contact" element={<Contact />} />
         <Route path="/teamentryform" element={<TeamEntryForm/>}/>
          */}
