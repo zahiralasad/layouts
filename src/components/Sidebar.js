@@ -1,61 +1,37 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import * as FarIcons from "react-icons/fa";
-import * as AiIcons from 'react-icons/ai';
-import { IconContext } from 'react-icons';
-
-import { SidebarData } from './SidebarData';
-import '../css/Sidebar.css'
-import '../css/App.css'
-import logo from '../images/logo.png';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/js/dist/dropdown'
 
 
 
 function Sidebar() {
-    const [sidebar, setSidebar] = useState(false)
-    const showSidebar = () => setSidebar(!sidebar)
     return (
-        <>
-        <IconContext.Provider value={{ color: '#fff' }}>
-            <div className="navbar">
-                <Link to='#' className='menu-bars'>
-                    <FarIcons.FaBars onClick={showSidebar} />
-                </Link>
-            </div >
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <ul className='nav-menu-items' onClick={showSidebar}>
-                    <li className='navbar-toggle'>
-                        <Link to='#' className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
-                        </Link>
-                        
-                    </li>
-                    {SidebarData.map((item, index) => {
-                        return (
-                            <>
-                            <li key={index} className={item.cName}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                            </li>
-                            </>
-                        );
-                    })
-                    }
-                    <li className='nav-bar-logo'> 
-                        <div>
-                            <img src={logo} className="App-logo nav-bar-logo" alt="logo"/>
-                            <div className="text-overlay">
-                                <h3>আমরা আমরা</h3>
-                            </div>
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-auto col-sm-2 bg-dark d-flex flex-column justify-content-between min-vh-100">
+                    <a className="text-decoration-none ms-4 d-flex align-items-center text-white d-none d-sm-inline">
+                        <span>Side Menu</span>
+                    </a>
+                    <div class="dropdown open">
+                        <a
+                            class="btn  dropdown-toggle text-white"
+                            type="button"
+                            id="triggerId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <li className="bi bi-person fs-4"></li><span className="fs-4 ms-3">Home</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item disabled" href="#">Disabled action</a>
                         </div>
-                        
-                    </li>
-                </ul>
-            </nav>
-            </IconContext.Provider>
-        </>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 export default Sidebar;
