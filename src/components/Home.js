@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import App from "../App";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       {/* <img src={logo} className="bi me-2 text-white" width="50" height="50" alt="logo" /> */}
       <div class="container">
         <div>Home</div>
+        <Link to='/picnicregistrationform'>Register to the picnic</Link>
         <a href="picnicregistrationform" class="nav-link text-white" aria-current="page">
           <span className="ms-2">Register to the Picnic 2024</span>
         </a>
