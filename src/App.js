@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 // import Contact from "./components/Contacts";
 import Header from "./components/Header";
-import PicnicRegistrationForm from "./components/PicnicRegistrationForm";
 import Contacts from "./components/Contacts";
 import Home from "./components/Home";
 
@@ -15,8 +14,7 @@ function App() {
             <Sidebar/>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/picnicregistrationfrom" element={<PicnicRegistrationForm />} />
-              <Route path="/contact" element={<Contacts />} />
+              <Route path="/contacts" element={<Contacts />} />
         
             </Routes>
           </div>
