@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Input Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>User Input Form</h2>
+  <form>
+    <div class="form-group">
+      <label for="numNames">Number of Names:</label>
+      <input type="number" class="form-control" id="numNames" placeholder="Enter number of names">
+    </div>
+    <div id="nameInputs"></div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Function to create input fields dynamically based on the number of names specified
+  function createNameInputs() {
+    var numNames = document.getElementById('numNames').value;
+    var nameInputsHtml = '';
+    for (var i = 1; i <= numNames; i++) {
+      nameInputsHtml += '<div class="form-group">';
+      nameInputsHtml += '<label for="name' + i + '">Name ' + i + ':</label>';
+      nameInputsHtml += '<input type="text" class="form-control" id="name' + i + '" placeholder="Enter name">';
+      nameInputsHtml += '</div>';
+    }
+    document.getElementById('nameInputs').innerHTML = nameInputsHtml;
+  }
+
+  // Event listener for changes in the number of names input field
+  document.getElementById('numNames').addEventListener('input', createNameInputs);
+</script>
+
+</body>
+</html>
